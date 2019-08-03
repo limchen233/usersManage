@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # usersmanage
 
 > A Vue.js project
@@ -19,3 +20,7 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# usersManage
+用户管理系统
+>>>>>>> 31e63a6e77a104d841c4618dd8ae7d56634c87ba
