@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # usersmanage
 
 > A Vue.js project
