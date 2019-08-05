@@ -36,6 +36,7 @@
 
 <script>
 import Alert from './Alert.vue';
+import { log } from 'util';
 
 export default {
   name: 'customers',
@@ -48,15 +49,16 @@ export default {
   },
   methods: {
     fetchCustomers(){
-      this.$http.get('http://localhost:3000/users')
-        .then(function(response){
+      // 发送请求
+      this.$axios.get('http://localhost:3000/users')
+        .then((response) => {
           // console.log(response);
-          this.customers = response.body;
+          this.customers = response.data;
         })
     },
     filterBy(customers,value){
       return customers.filter(function(customer){
-        return customer.name.match(value);
+      return customer.name.match(value);
       })
     }
   },

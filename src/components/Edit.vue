@@ -57,10 +57,10 @@ export default {
   },
   methods: {
     fetchCustomer(id){
-      this.$http.get('http://localhost:3000/users/'+id )
-      .then(function(response){
+      this.$axios.get('http://localhost:3000/users/'+id )
+      .then((response) => {
         // console.log(response);
-        this.customer = response.body;
+        this.customer = response.data;
         
       })
     },
@@ -80,8 +80,8 @@ export default {
           profession: this.customer.profession,
           introduction: this.customer.introduction
         }
-        this.$http.put("http://localhost:3000/users/"+this.$route.params.id,updateCustomer)
-          .then(function(response){
+        this.$axios.put("http://localhost:3000/users/"+this.$route.params.id,updateCustomer)
+          .then((response) => {
             // console.log(response);
             // 成功后跳转到根目录
             this.$router.push({path:"/",query:{alert:"用户信息更新成功！"}});

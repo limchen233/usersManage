@@ -2,7 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App';
-import VueResource from 'vue-resource';
+// import VueResource from 'vue-resource';
+import axios from 'axios';
 
 //引入组件
 import Customers from './components/Customers.vue';
@@ -16,7 +17,11 @@ import Edit from './components/Edit.vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-Vue.use(VueResource);
+// Vue.use(VueResource);
+
+// axios没有提供Vue.use()方法
+// 将axios绑定在vue原型上，然后通过this.$axios使用axios
+Vue.prototype.$axios = axios;
 
 Vue.config.productionTip = false;
 

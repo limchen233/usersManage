@@ -29,16 +29,16 @@ export default {
   },
   methods: { 
     fetchCustomers(id){
-      this.$http.get('http://localhost:3000/users/'+id)
-        .then(function(response){
+      this.$axios.get('http://localhost:3000/users/'+id)
+        .then((response) => {
           // console.log(response);
-          this.customer = response.body;
+          this.customer = response.data;
         })
     },
     deleteCustomer(id){
       // console.log(id);
-      this.$http.delete('http://localhost:3000/users/'+id)
-        .then(function(response){
+      this.$axios.delete('http://localhost:3000/users/'+id)
+        .then((response) => {
           this.$router.push({path: '/',query:{alert:"用户删除成功！"}});
         })
     }
