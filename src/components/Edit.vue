@@ -83,6 +83,7 @@ export default {
         this.$axios.put("http://localhost:3000/users/"+this.$route.params.id,updateCustomer)
           .then((response) => {
             // console.log(response);
+            
             // 成功后跳转到根目录
             this.$router.push({path:"/",query:{alert:"用户信息更新成功！"}});
           })

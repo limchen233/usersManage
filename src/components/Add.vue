@@ -76,6 +76,7 @@ export default {
         this.$axios.post("http://localhost:3000/users",newCustmer)
           .then((response) => {
             // console.log(response);
+            
             // 成功后跳转到根目录
             this.$router.push({path:"/",query:{alert:"用户信息添加成功！"}});
           })

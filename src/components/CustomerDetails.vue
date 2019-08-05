@@ -35,8 +35,10 @@ export default {
           this.customer = response.data;
         })
     },
+
     deleteCustomer(id){
       // console.log(id);
+
       this.$axios.delete('http://localhost:3000/users/'+id)
         .then((response) => {
           this.$router.push({path: '/',query:{alert:"用户删除成功！"}});
@@ -44,7 +46,7 @@ export default {
     }
   },
   
-  created() {
+    created() {
     this.fetchCustomers(this.$route.params.id);
   }
 }

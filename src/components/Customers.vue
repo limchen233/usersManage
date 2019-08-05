@@ -53,6 +53,7 @@ export default {
       this.$axios.get('http://localhost:3000/users')
         .then((response) => {
           // console.log(response);
+          
           this.customers = response.data;
         })
     },
