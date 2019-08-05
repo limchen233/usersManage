@@ -16,7 +16,7 @@ npm run dev
 用户管理系统
 
 本项目是一个简单的用户管理系统，实现了对数据的crud。
-用到的技术有html，css，js和axios，vue-router，webpack,bootstrap等
-后台数据用json-server处理封装
+用到的技术有html，css，js和axios，vue-router，webpack,bootstrap，ES6语法等
+后台数据用json-server处理封装,postman测试接口
 
 注意：如果down下来不能运行，应该是webpack-dev-server的版本不对，这里上传的是3.1.11（上传时提示安全警告，所以升级到了3.1.11）。
